@@ -2,10 +2,13 @@ namespace jcevallosS2A.Views;
 
 public partial class vElementos : ContentPage
 {
-	public vElementos()
+    private string usuarioConectado;
+    public vElementos(string usuario)
 	{
 		InitializeComponent();
-	}
+        usuarioConectado = usuario;
+        lblUsuarioConectado.Text = $"Usuario Conectado: {usuarioConectado}";
+    }
 
     private void bntPaises_Clicked(object sender, EventArgs e)
     {
